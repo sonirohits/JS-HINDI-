@@ -26,9 +26,34 @@
 
 
 //you can pass array like this
-const newarray =[100,200,300,400];
-function returnSecondValue(temp){
-    console.log(temp[1]);
-}
+// const newarray =[100,200,300,400];
+// function returnSecondValue(temp){
+//     console.log(temp[1]);
+// }
 //returnSecondValue([100,200,300,400]);
 //returnSecondValue(newarray); //200
+
+// function one(){
+//     const  username ='Rohit';
+//     function two(){
+//         const website ='YouTube';
+//         console.log(username); //error nai dega
+//     }
+//     console.log(website); erroe dega
+//     two();
+// }
+ 
+// one();
+// console.log(addOne(1)); //this will not give error :output 2
+
+// function addOne(value){
+//     return value + 1;
+// }
+// console.log(addOne(1)); //output :2
+
+ 
+console.log(addTwo(1));     ///this weill give error
+ const  addTwo=function (value){
+    return value +2;
+}
+// console.log(addTwo(1));  //this will print 3
