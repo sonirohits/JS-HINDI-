@@ -83,7 +83,7 @@ let num2  =num1.map(function(val){return val+10}).map(function(val){return val+1
 console.log(num2);
 //output  [10,12,13,14,15,16,17,18,19,20]
 //        [ 12, 13, 14, 15, 16,17, 18, 19, 20, 21]
- ///      [12,1,16,18,20]
+ ///      [12,14,16,18,20]
 
 
  //reduce
