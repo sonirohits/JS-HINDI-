@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          body{
+            background-color: #212121;
+            color: #fff;
+          }
+    </style>
+</head>
+<body>
+    <ul class="language">
+     <li>Javascript</li>
+    </ul>
+    <script>
+        function addLanguage(lang){
+            //isme har bar pura dom tree traverse hota he
+          const li = document.createElement('li');
+          li.innerHTML =`${lang}`;
+          const temp =document.querySelector('.language');
+          temp.appendChild(li);
+        }
+        // innerHTML pura tree  traverse karta he
+        
+
+        addLanguage('pythone');
+        addLanguage('typeScript');
+        addLanguage('cpp');
+
+        //ye isme pura tree traverse nahii karna pada he 
+        function addOptiLanguage(lang){
+            const li = document.createElement('li');
+            li.appendChild(document.createTextNode(lang));
+           document.querySelector('.language').appendChild(li);
+        }
+        addOptiLanguage('Go Laag');
+
+        //EDit 
+       const secondlang = document.querySelector("li:nth-child(2)");
+         secondlang.innerHTML ='mojo';
+      // secondlang.textContent ='BGMI MOBILE'; 
+       const newli =document.createElement('li');
+       newli.textContent ='hello jee';
+       secondlang.replaceWith(newli); ///it replace newli with secondlang
+
+       const firstlang =document.querySelector("li:first-child");
+       firstlang.outerHTML ='<li>JIJIJI</li>'
+
+       //remove
+       const  lastlang =document.querySelector('li:last-child');
+       lastlang.remove(); //go lang will remove
+    </script>
+</body>
+</html>
