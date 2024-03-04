@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #414141;
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <h2>Amazing Images</h2>
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+    </div>
+
+    <script>
+        //js me events sequentialy run hote he mostly
+        // document.getElementById('owl').onclick =function(){
+        //     alert('owl click hua he');
+        // }
+
+    //     document.getElementById('owl').addEventListener('click',function(e)
+        
+    //     {console.log('owl clicked again');
+    //     console.log(e); //kaha pe click kiya //kis time pe click hua he 
+    //     //type //timestampe // defaultprevented(default behaviour prevent karta he) //current target //client ka x //clint ka y
+    //     //alert key //press key //codes of key //speed of keyboard key
+        
+    // },true)
+
+    //event proporgatione
+    //->there is 2 context of event proporgatione 
+    //1)event bubling  // false hota he to event bubling use hota he
+    //2)event capturing  //true means event capturing 
+
+    //example of event proporgations
+
+    // document.getElementById('images').addEventListener('click',function(e){
+    //    console.log('clicked inside the ul');
+    // },true)
+
+    //output if we clicked on owl : owl clicked again //cliked inside the UI //  (false in both cases) //means bubling phase  bottom to top so pehle bottom is owl and then ul
+    //outpu   if we clicked  on owl :cliked inside the UI // owl clicked again //(true in both case) //means capturing  phase
+    //attachevent()
+    //jquery -.on()
+
+
+
+    //if we want that  owl clicked print ho but click in ul print na ho to 
+    // document.getElementById('owl').addEventListener('click',function(e)
+        
+    //     {console.log('owl clicked again');
+    //     console.log(e); 
+    //     e.stopPropagation();//kaha pe click kiya //kis time pe click hua he 
+    //     //type //timestampe // defaultprevented(default behaviour prevent karta he) //current target //client ka x //clint ka y
+    //     //alert key //press key //codes of key //speed of keyboard key
+    // },false)
+    // document.getElementById('images').addEventListener('click',function(e){
+    //    console.log('clicked inside the ul');
+    // },false)
+
+    //output is owl clicked again
+
+    document.querySelector('#images').addEventListener('click',function(e))
+    </script>
+</body>
+</html>
