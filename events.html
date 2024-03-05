@@ -72,7 +72,31 @@
 
     //output is owl clicked again
 
-    document.querySelector('#images').addEventListener('click',function(e))
+//     document.querySelector('#images').addEventListener('click',function(e){
+//    console.log(e.target.parentNode);
+//    let removeit =e.target.parentNode;
+//    /// removeit.remove();
+//    removeit.parentNode.removeChild(removeit);
+//     });
+
+ // how to stope event prporgation
+//    document.getElementById('images').addEventListener('click',function(e){
+//       console.log('clicked in images');
+    
+//    });
+//    document.getElementById('owl').addEventListener('click',function(e){
+//    console.log('clicked in owl');
+//    e.stopPropagation();
+//    }); //owl clicked
+
+document.getElementById('images').addEventListener('click',function(e){
+      console.log('clicked in images');
+      e.stopPropagation();
+   },true);
+   document.getElementById('owl').addEventListener('click',function(e){
+   console.log('clicked in owl');
+   },true);
+   
     </script>
 </body>
 </html>
