@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur Code</h1>
+    <button id="stop">Stop</button>
+   
+    <!-- we get settimeout and setinterval from the browser side -->
+    <script>
+        // setTimeout(function(){
+        //    console.log("Hi Rohit");
+        // },2000)
+        // setInterval(function(){
+        //  console.log("rdra");
+        // },2000)
+        // setTimeout(function(){
+        //     document.querySelector('h1').innerHTML ="Hi Pro Coder";
+        // },3000)
+
+        // how we can stope the 
+        const changeMe =setTimeout(function(){
+            document.querySelector('h1').innerHTML ="Hi Pro Coder";
+        },3000);
+        // clearTimeout(changeMe);
+        document.querySelector("#stop").addEventListener('click',function(){
+            clearTimeout(changeMe);
+            console.log("stoped");
+        })
+        // cleartimeout() used to stope the set timeout but we have to pass the refernce of  that means we have to give a say that what kind of  settimeout() we are goint to stope
+        //like  clearTimeout(changeMe); this 
+    </script>
+</body>
+</html>
