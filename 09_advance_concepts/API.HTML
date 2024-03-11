@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121;">
+    
+    <script>
+       const xhr = new XMLHttpRequest();
+       xhr.open('GET','https://api.github.com/users/hiteshchoudhary'); // is used to set up the request details
+       xhr.onreadystatechange =function(){
+        console.log(xhr.readyState);
+        if(xhr.readyState===4){
+            // const data =(this.responseText);
+            //   console.log(data.followers); //output will be undifind becaus we samjya ke respons object me aya he lekin response String me aya he
+              // so we have to write like below
+              const data =JSON.parse(this.responseText); //string ko json formate me karta he
+              console.log(data.followers);  //17284
+        }
+       }
+       xhr.send(); //is used to actually send the request to the server.
+       //console.log()  js ka runtime deta he  v8 engin se
+    </script>
+</body>
+</html>
