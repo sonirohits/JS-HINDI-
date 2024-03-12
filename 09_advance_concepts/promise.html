@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+    <style>
+        body{
+            background-color: #212121;
+        }
+    </style>
+</head>
+<body>
+<!-- promise object represent the completion and failur of a something -->
+<script>
+    // promise future me jake complete hota he 
+    // pending
+    //fullfilled
+    //rejected
+    //promise is a object
+    const promiseone  =new Promise(function(resolve,reject){
+        //  Do asyncs task
+        //Data Base Tasks
+        //Network Calls
+        setTimeout(function(){
+            console.log('this is promise');
+            resolve();
+        },3000);
+      
+    });
+   
+  
+  promiseone.then(function(){
+    console.log('promise completed');
+  });
+</script>;
+</body>
+</html>
